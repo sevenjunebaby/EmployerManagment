@@ -1,0 +1,50 @@
+@model IEnumerable<Employee>
+
+@{
+    ViewData["Title"] = "Liste des Employés";
+}
+
+<h2>Liste des Employés</h2>
+
+<p>
+    <a class="btn btn-primary" href="/Employee/Create">Ajouter Employé</a>
+</p>
+
+<form method="get" asp-action="Search">
+    <input type="text" name="term" placeholder="Search" class="form-control" style="width:250px; display:inline-block;" />
+    <button type="submit" class="btn btn-secondary">Search</button>
+</form>
+
+<br />
+
+<table class="table table-bordered table-striped">
+    <thead>
+        <tr>
+            <th>Id</th>
+            <th>Name</th>
+            <th>Departement</th>
+            <th>Salary</th>
+            <th></th>
+        </tr>
+    </thead>
+    <tbody>
+        @foreach (var emp in Model)
+        {
+            <tr>
+                <td>@emp.Id</td>
+                <td>@emp.Name</td>
+                <td>@emp.Departement</td>
+                <td>@emp.Salary</td>
+                <td>
+                    <a href="/Employee/Edit/@emp.Id">Edit</a> |
+                    <a href="/Employee/Details/@emp.Id">Details</a> |
+                    <a href="/Employee/Delete/@emp.Id">Delete</a>
+                </td>
+            </tr>
+        }
+    </tbody>
+</table>
+
+<p>
+    <a href="/Employee/Index">Afficher tous les employés</a>
+</p>
