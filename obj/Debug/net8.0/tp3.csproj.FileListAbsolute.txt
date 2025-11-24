@@ -28,3 +28,4 @@
 /home/7june/Documents/Asp.net/tp3/tp3/obj/Debug/net8.0/tp3.pdb
 /home/7june/Documents/Asp.net/tp3/tp3/obj/Debug/net8.0/tp3.genruntimeconfig.cache
 /home/7june/Documents/Asp.net/tp3/tp3/obj/Debug/net8.0/ref/tp3.dll
+/home/7june/Documents/Asp.net/tp3/tp3/obj/Debug/net8.0/tp3.sourcelink.json
